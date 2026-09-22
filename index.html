@@ -11,13 +11,19 @@
     <div class="container">
         <h1>Hello Cloud Team!</h1>
         <p>Welcome to my simple website.</p>
+
         <button onclick="changeColor()">Click Me</button>
     </div>
 
     <script>
         function changeColor() {
-            document.body.style.backgroundColor =
-                document.body.style.backgroundColor === "blue" ? "red" : "blue";
+            let button = document.querySelector("button");
+
+            if (button.style.backgroundColor === "blue") {
+                button.style.backgroundColor = "red";
+            } else {
+                button.style.backgroundColor = "blue";
+            }
         }
     </script>
 
